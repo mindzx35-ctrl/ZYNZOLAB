@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b12"><title>ZYNZO AI Studio</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="logo">Z</span><span>ZYNZO <small>AI STUDIO</small></span></a><span class="pill"><i></i> Creator workspace</span></header>
+<main>
+<section class="hero"><div class="eyebrow">YOUR AI VIDEO WORKFLOW</div><h1>One idea.<br><span>Ready-to-create video.</span></h1><p>Turn a topic into a script, scene prompts, narration and a custom thumbnail. Built for creators and mobile screens.</p></section>
+<section class="panel">
+<div class="section-title"><span class="step">01</span><div><h2>Start a video</h2><p>Tell the studio what you want to make.</p></div></div>
+<label for="topic">Video topic</label><textarea id="topic" rows="3" placeholder="Example: Your Phone Is Training Your Brain to Hate Boredom"></textarea>
+<div class="two">
+<div><label for="channel">Channel / brand</label><input id="channel" value="ZYNZO"></div>
+<div><label for="duration">Video length</label><select id="duration"><option value="60">1 minute</option><option value="180">3 minutes</option><option value="300" selected>5 minutes</option><option value="600">10 minutes</option></select></div>
+</div>
+<div class="two">
+<div><label for="language">Voiceover language</label><select id="language"><option>English (US)</option><option selected>Hindi</option></select></div>
+<div><label for="style">Visual style</label><select id="style"><option>2D black-and-white stick figure</option><option>Cinematic documentary</option><option>Photorealistic cinematic</option><option>Minimal motion graphics</option></select></div>
+</div>
+<label for="audience">Target audience</label><input id="audience" value="US and global audience">
+<button id="generate" class="primary">✦ Generate video package <span>→</span></button>
+<p class="hint">Creates a complete production plan. AI services need server API keys configured before generation works.</p>
+<div id="status" class="status" aria-live="polite"></div>
+</section>
+<section id="results" class="panel hidden">
+<div class="section-title"><span class="step">02</span><div><h2>Your production package</h2><p>Edit, copy or export each part.</p></div></div>
+<div class="tabs"><button class="tab active" data-tab="script">Script</button><button class="tab" data-tab="scenes">Scene prompts</button><button class="tab" data-tab="metadata">YouTube SEO</button></div>
+<div id="script" class="tabbody"><label>Voiceover script</label><textarea id="scriptText" rows="12"></textarea><div class="actions"><button class="secondary" data-copy="scriptText">Copy script</button><button class="secondary" id="voice">Generate voice audio</button></div><audio id="audio" controls class="hidden"></audio></div>
+<div id="scenes" class="tabbody hidden"><label>Scene-by-scene prompts</label><textarea id="scenesText" rows="14"></textarea><div class="actions"><button class="secondary" data-copy="scenesText">Copy prompts</button><button class="secondary" id="export">Export production pack</button></div></div>
+<div id="metadata" class="tabbody hidden"><label>Title ideas</label><textarea id="titlesText" rows="4"></textarea><label>Description</label><textarea id="descriptionText" rows="6"></textarea><label>Thumbnail prompt (no text)</label><textarea id="thumbnailPrompt" rows="5"></textarea><div class="actions"><button class="secondary" data-copy="titlesText">Copy titles</button><button class="secondary" id="thumbnail">✦ Generate thumbnail</button></div><div id="thumbResult"></div></div>
+</section>
+<section class="panel next-panel"><div class="section-title"><span class="step">03</span><div><h2>From plan to finished video</h2><p>Generation services plug into this workflow.</p></div></div><div class="pipeline"><div><b>01</b><strong>Script & storyboard</strong><small>AI text generation</small></div><div><b>02</b><strong>Visuals & voice</strong><small>Image / video / TTS APIs</small></div><div><b>03</b><strong>Assemble MP4</strong><small>Rendering service</small></div><div><b>04</b><strong>Publish</strong><small>YouTube API connection</small></div></div><p class="hint">Automatic MP4 creation and YouTube upload require video-generation, rendering and YouTube API credentials. Never put API keys in browser code.</p></section>
+<footer>ZYNZO AI STUDIO <span>Built for creators · Mobile-first</span></footer>
+</main><script src="/app.js"></script>
+</body></html>
