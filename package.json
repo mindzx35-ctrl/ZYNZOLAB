@@ -1,11 +1,1 @@
-{
-  "name": "zynzo-ai-studio",
-  "version": "0.1.0",
-  "private": true,
-  "type": "module",
-  "description": "AI-assisted YouTube production workspace for ZYNZO",
-  "engines": { "node": ">=20" },
-  "scripts": { "dev": "vercel dev" },
-  "dependencies": {},
-  "devDependencies": { "vercel": "^41.0.0" }
-}
+{"name":"zynzo-ai-studio","version":"0.1.0","private":true,"type":"module","engines":{"node":">=20"},"scripts":{"dev":"vercel dev"},"devDependencies":{"vercel":"^41.0.0"}}
